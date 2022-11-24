@@ -25,7 +25,8 @@ public class Orders extends Main {
     }
 
     static int delivery_charge(int x) {
-        return x;
+        int charge = Delivery.calculate_delivery_cost(1);
+        return charge;
     }
 
     public static void main(String[] args) {

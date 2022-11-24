@@ -3,6 +3,7 @@ public class Delivery extends Orders {
     static int base_fee = 2;
 
     static float get_distance(float x) {
+        // maybe add google maps implimentation
         return x;
     }
 
