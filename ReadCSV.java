@@ -18,6 +18,7 @@ class ReadCSV {
                 String[] line = testRow.split(",");
                 data.add(line);
             }
+            // br.close();
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: File not found");
         } catch (IOException e) {

@@ -8,7 +8,8 @@ public class Account extends Delivery {
 
     static void change_details(String x, String y) {
         if (x == "name") {
-            name = x + " " + y;
+            name = x + " " + y.toUpperCase();
+            System.out.print(name);
         } else if (x == "address") {
             address = x + " " + y;
         } else if (x == "email") {
@@ -16,6 +17,5 @@ public class Account extends Delivery {
         } else {
             System.out.print("error change details incorrect input");
         }
-
     }
 }
