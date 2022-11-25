@@ -2,7 +2,9 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome please log in");
-        LogIn.login();
+        // LogIn.login();
         System.out.println("Logged in");
+        String[] write = { "Callum", "pass" };
+        Register.writing(write);
     }
 }
