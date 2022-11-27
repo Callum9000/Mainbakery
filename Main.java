@@ -4,7 +4,6 @@ public class Main {
         System.out.println("Welcome please log in");
         // LogIn.login();
         System.out.println("Logged in");
-        String[] write = { "Callum", "pass" };
-        Register.writing(write);
+        Register.writing();
     }
 }
