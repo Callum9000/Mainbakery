@@ -9,6 +9,13 @@
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Main",
+            "projectName": "Mainbakery_c342012e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
             "projectName": "Mainbakery_5c177f23"
         },
         {
