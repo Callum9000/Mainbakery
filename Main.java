@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
-        LogIn.login();
+        //LogIn.login();
         viewer();
     }
 
@@ -57,6 +57,10 @@ public class Main{
 
             case "quit":
                 return input;
+
+            case "products":
+                output = ProductsDTO.productsToString();
+                return output;
                 
             default:
                 output = "Invalid command, please try again. Type 'help' for a list of commands.";
