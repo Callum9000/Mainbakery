@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import factoryClass.carrotCake;
+import factoryClass.productFactory;
 public class Main{
     public static void main(String[] args) {
         LogIn.login();
@@ -57,6 +60,10 @@ public class Main{
 
             case "quit":
                 return input;
+
+            // case "test":
+            // carrotCake.create();
+            //     Order.Order("michael", "address", "chocCake")
                 
             default:
                 output = "Invalid command, please try again. Type 'help' for a list of commands.";

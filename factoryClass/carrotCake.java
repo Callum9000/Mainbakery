@@ -6,6 +6,7 @@ public class carrotCake implements productType{
     public void create(){
         System.out.println("inside carrot cake::cakeType() method");
     }
+    @Override
     public int getPrice(){
         return this.price;
     }

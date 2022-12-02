@@ -6,6 +6,7 @@ public class croissant implements productType{
     public void create(){
         System.out.println("inside croissant::pastryType() method");
     }
+    @Override
     public int getPrice(){
         return this.price;
     }

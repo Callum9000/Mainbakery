@@ -6,6 +6,7 @@ public class chocCake implements productType{
     public void create(){
         System.out.println("inside choc cake::cakeType() method");
     }
+    @Override
     public int getPrice(){
         return this.price;
     }

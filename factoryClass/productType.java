@@ -1,5 +1,6 @@
 package factoryClass;
 
 public interface productType {
-    void create();
+     void create();
+    int getPrice();
 }
