@@ -28,19 +28,4 @@ public class Orders extends Main {
         int charge = Delivery.calculate_delivery_cost(1);
         return charge;
     }
-
-    public static void main(String[] args) {
-        List<String> current_cart = new ArrayList<String>();
-        current_cart.add("1");
-        System.out.println(Account.name);
-        System.out.println(Account.address);
-        System.out.println(Account.email);
-        Account.change_details("name", "callum");
-        Account.change_details("address", "123 drive");
-        Account.change_details("email", "Test@gmail.com");
-        System.out.println(Account.name);
-        System.out.println(Account.address);
-        System.out.println(Account.email);
-    }
-
 }

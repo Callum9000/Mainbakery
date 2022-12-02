@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Register {
-    public static void writing() {
+    public static void writing(String file) {
 
         try {
             Scanner myObj = new Scanner(System.in);
@@ -13,15 +13,14 @@ public class Register {
             System.out.println("Enter password");
             String inputPassword = (myObj.nextLine()).toString();
             String[] newAccount = { inputUserName, inputPassword };
-            ArrayList<String[]> data = ReadCSV.readcsv("Login.csv");
-            FileWriter fw = new FileWriter("Login.csv");
+            ArrayList<String[]> data = ReadCSV.readcsv(file);
+            FileWriter fw = new FileWriter(file);
             for (int i = 0; i < data.size(); i++) {
-                writeLine(fw, data.get(i));
+                ReadCSV.writeLine(fw, data.get(i));
                 fw.write(System.lineSeparator());
             }
-            writeLine(fw, newAccount);
+            ReadCSV.writeLine(fw, newAccount);
             fw.close();
-            myObj.close();
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -29,13 +28,4 @@ public class Register {
 
     }
 
-    public static void writeLine(FileWriter x, String[] line) throws IOException {
-        for (String cell : line) {
-            if (cell.equals(line[line.length - 1])) {
-                x.write(cell);
-            } else {
-                x.write(cell + ",");
-            }
-        }
-    }
 }
