@@ -2,7 +2,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Register {
+public class Register { //Create new Account
     public static void writing(String file) {
 
         try {

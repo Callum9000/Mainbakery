@@ -14,6 +14,6 @@ public class StaffDiscount extends DiscountDecorator{
 
     public double GetDiscount(){
 
-        return tempDiscount.GetDiscount() + 40;
+        return tempDiscount.GetDiscount() + 0.40;
     }
 }

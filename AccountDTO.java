@@ -1,8 +1,6 @@
-import java.io.FileWriter;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-class AccountDTO {
+class AccountDTO { //Business logic for our Accounts class. Setters and Getters along with a toString method.
 
     public static String getName() {
         return Account.name;
@@ -40,16 +38,25 @@ class AccountDTO {
         return Account.id;
     }
 
-    public static void setID(String newID) {
-        Account.id = newID;
-    }
-
     public static void setAll(String[] account) {
         setID(account[0]);
         setEmail(account[1]);
         setPassword(account[2]);
         setName(account[3]);
         setAddress(account[4]);
+        setDiscountType(account[5]);
+    }
+
+    public static void setID(String newID) {
+        Account.id = newID;
+    }
+
+    public static String getDiscountType(){
+        return Account.DiscountType;
+    }
+
+    public static void setDiscountType(String newDiscountType){
+        Account.DiscountType = newDiscountType;
     }
 
     public static String AccountDetailsToString() {

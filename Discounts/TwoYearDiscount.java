@@ -14,6 +14,6 @@ public class TwoYearDiscount extends DiscountDecorator {
 
     public double GetDiscount(){
 
-        return tempDiscount.GetDiscount() + 30;
+        return tempDiscount.GetDiscount() + 0.30;
     }
 }

@@ -4,4 +4,5 @@ public class Account {
     static String address = "";
     static String email = "";
     static String password = "";
+    static String DiscountType = "";
 }

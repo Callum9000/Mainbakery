@@ -6,4 +6,15 @@ public class carrotCake implements productType{
         System.out.println("inside carrot cake::cakeType() method");
     }
 
+    @Override
+    public String getName() {
+        String output = "Carrot Cake";
+        return output;
+    }
+
+    @Override
+    public double getPrice() {
+        return 5.0;
+    }
+
 }

@@ -14,6 +14,6 @@ public class StudentDiscount extends DiscountDecorator {
 
     public double GetDiscount(){
 
-        return tempDiscount.GetDiscount() + 10;
+        return tempDiscount.GetDiscount() + 0.10;
     }
 }

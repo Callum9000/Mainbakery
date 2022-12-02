@@ -1,10 +1,9 @@
-import java.util.Scanner; // Import the Scanner class
 import java.io.*;
 import java.util.ArrayList; // import the ArrayList class
 
 class ReadCSV {
 
-    public static ArrayList<String[]> readcsv(String input_file) {
+    public static ArrayList<String[]> readcsv(String input_file) { //Reads selected file, returns error if file not found
 
         ArrayList<String[]> data = new ArrayList<String[]>();
         String testRow;
@@ -23,7 +22,7 @@ class ReadCSV {
         return data;
     }
 
-    public static void writeLine(FileWriter x, String[] line) throws IOException {
+    public static void writeLine(FileWriter x, String[] line) throws IOException { //writes out input to a file
         for (String cell : line) {
             if (cell.equals(line[line.length - 1])) {
                 x.write(cell);
@@ -33,10 +32,10 @@ class ReadCSV {
         }
     }
 
-    public static void writeAccountDetails(String id, String file) {
+    public static void writeAccountDetails(String id, String file) { //writes out a new accounts details to a file
         try {
             String[] newAccount = { id, AccountDTO.getEmail(), AccountDTO.getPassword(), AccountDTO.getName(),
-                    AccountDTO.getAddress() };
+                    AccountDTO.getAddress(), AccountDTO.getDiscountType() };
             ArrayList<String[]> data = ReadCSV.readcsv(file);
             FileWriter fw = new FileWriter(file);
             for (int i = 0; i < data.size(); i++) {
@@ -51,6 +50,25 @@ class ReadCSV {
             // ReadCSV.writeLine(fw, newAccount);
             fw.close();
         } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public static void writeOrders(String file){ //writes out a orders detail to a file
+        try{
+            String[] newOrder = {ProductsDTO.productsToString()};
+            ArrayList<String[]> data = ReadCSV.readcsv(file);
+            FileWriter fw = new FileWriter(file);
+            for (int i = 0; i < data.size(); i++) {
+
+
+                    ReadCSV.writeLine(fw, newOrder);
+
+                fw.write(System.lineSeparator());
+            }
+            // ReadCSV.writeLine(fw, newAccount);
+            fw.close();
+        } catch (Exception e){
             System.out.println(e);
         }
     }

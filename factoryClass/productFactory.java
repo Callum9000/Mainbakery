@@ -1,6 +1,6 @@
 package factoryClass;
 public class productFactory{
-    public productType getType(String x){
+    public static productType getType(String x){
         if(x == null){
             return null;
         }
