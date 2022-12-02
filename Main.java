@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import BillPackage.Billythekid;
+
 
 public class Main {
 
@@ -88,6 +90,10 @@ public class Main {
 
             case "products":
                 output = ProductsDTO.productsToString();
+                return output;
+            
+            case "bills":
+                output = Billythekid.bills();
                 return output;
 
             default:
