@@ -13,4 +13,5 @@ class Singleton {
         }
         return obj;
     }
+
 }

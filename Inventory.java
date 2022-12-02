@@ -9,3 +9,4 @@ public class Inventory extends Products {
         System.out.println(ingredient_list);
     }
 }
+

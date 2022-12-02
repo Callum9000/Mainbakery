@@ -1,5 +1,4 @@
 import java.util.Scanner; // Import the Scanner class
-
 import java.io.*;
 import java.util.ArrayList; // import the ArrayList class
 
