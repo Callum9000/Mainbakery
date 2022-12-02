@@ -1,50 +1,65 @@
+import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
-class AccountDTO extends Account{
 
-    public static String getName(){
+class AccountDTO {
+
+    public static String getName() {
         return Account.name;
     }
 
-    public static void setName(String newName){
+    public static void setName(String newName) {
         Account.name = newName;
     }
 
-    public static String getEmail(){
+    public static String getEmail() {
         return Account.email;
     }
 
-    public static void setEmail(String newEmail){
+    public static void setEmail(String newEmail) {
         Account.email = newEmail;
     }
 
-    public static String getAddress(){
+    public static String getAddress() {
         return Account.address;
     }
 
-    public static void setAddress(String newAddress){
+    public static void setAddress(String newAddress) {
         Account.address = newAddress;
     }
-    public static Boolean getStaffDetails(){
-        return Account.is_staff;
-    }
 
-    public static String getPassword(){
+    public static String getPassword() {
         return Account.password;
     }
 
-    public static void setPassword(String newPassword){
+    public static void setPassword(String newPassword) {
         Account.password = newPassword;
-    } 
-    
-    public static String AccountDetailsToString()
-    {
-        String output = "Name: " + getName() + " Email: " + getEmail() + " Password: " + getPassword() + " Address: " + getAddress();
+    }
+
+    public static String getID() {
+        return Account.id;
+    }
+
+    public static void setID(String newID) {
+        Account.id = newID;
+    }
+
+    public static void setAll(String[] account) {
+        setID(account[0]);
+        setEmail(account[1]);
+        setPassword(account[2]);
+        setName(account[3]);
+        setAddress(account[4]);
+    }
+
+    public static String AccountDetailsToString() {
+        String output = "Name: " + getName() + " Email: " + getEmail() + " Password: " + getPassword() + " Address: "
+                + getAddress();
         return output;
 
     }
 
-    public static boolean setAccountDetails()
-    {
+    public static boolean setAccountDetails() {
         boolean complete = false;
         String input;
         Scanner in = new Scanner(System.in);
@@ -53,7 +68,7 @@ class AccountDTO extends Account{
         System.out.println("Please enter the updated " + detail);
         input = in.nextLine();
 
-        switch(detail){
+        switch (detail) {
             case "name":
                 setName(input);
                 return complete = true;
@@ -68,6 +83,7 @@ class AccountDTO extends Account{
                 return complete = true;
             default:
                 return complete;
-            }
+        }
     }
+
 }

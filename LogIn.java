@@ -1,11 +1,11 @@
 import java.util.Scanner; // Import the Scanner class
-import java.util.List;
+import java.util.ArrayList;
 
 class LogIn {
-
-  public static void login() {
+  public static String[] login(String file) {
     Boolean accepted = false;
-    List<String[]> data = ReadCSV.readcsv("LogIn.csv");
+    String[] accountName = {};
+    ArrayList<String[]> data = ReadCSV.readcsv(file);
 
     while (accepted == false) {
       Scanner myObj = new Scanner(System.in);
@@ -16,16 +16,18 @@ class LogIn {
 
       for (int i = 0; i < data.size(); i++) {
         String[] account = data.get(i);
-        if (inputuserName.equals(account[0]) && inputPassword.equals(account[1])) {
+        if (inputuserName.equals(account[1]) && inputPassword.equals(account[2])) {
           System.out.println("Valid");
           accepted = true;
+          accountName = account;
         }
       }
 
       if (accepted != true) {
         System.out.println("Invalid try again");
       }
-    }
-  }
 
+    }
+    return accountName;
+  }
 }
