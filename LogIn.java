@@ -2,10 +2,10 @@ import java.util.Scanner; // Import the Scanner class
 import java.util.ArrayList;
 
 class LogIn {
-  public static String[] login() {
+  public static String[] login(String file) {
     Boolean accepted = false;
     String[] accountName = {};
-    ArrayList<String[]> data = ReadCSV.readcsv("Mainbakery//Login.csv");
+    ArrayList<String[]> data = ReadCSV.readcsv(file);
 
     while (accepted == false) {
       Scanner myObj = new Scanner(System.in);

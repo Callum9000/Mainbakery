@@ -2,17 +2,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String LoginFile = "Mainbakery//Login.csv";
+        String LoginFile = "Login.csv";
+        LoginPage(LoginFile);
+        viewer(LoginFile);
+    }
+
+    public static void LoginPage(String file) {
         Scanner LR = new Scanner(System.in);
         System.out.println("Login or Register?");
         String LoginOrRegister = (LR.nextLine()).toString();
         if (LoginOrRegister.equals("L")) {
-            String[] account = LogIn.login();
+            String[] account = LogIn.login(file);
             AccountDTO.setAll(account);
         } else if (LoginOrRegister.equals("R")) {
-            Register.writing(LoginFile);
+            Register.writing(file);
         }
-        viewer(LoginFile);
     }
 
     public static void viewer(String file) {

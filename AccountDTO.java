@@ -44,6 +44,14 @@ class AccountDTO {
         Account.id = newID;
     }
 
+    public static void setAll(String[] account) {
+        setID(account[0]);
+        setEmail(account[1]);
+        setPassword(account[2]);
+        setName(account[3]);
+        setAddress(account[4]);
+    }
+
     public static String AccountDetailsToString() {
         String output = "Name: " + getName() + " Email: " + getEmail() + " Password: " + getPassword() + " Address: "
                 + getAddress();
