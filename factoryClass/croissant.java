@@ -1,8 +1,8 @@
 package factoryClass;
 
-public class croissant implements pastryType{
+public class croissant implements productType{
     @Override
-    public void pastryType(){
+    public void create(){
         System.out.println("inside croissant::pastryType() method");
     }
 }
